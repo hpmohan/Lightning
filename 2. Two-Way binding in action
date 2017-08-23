@@ -1,0 +1,8 @@
+<aura:component >
+    <aura:attribute name="nameString" type="string" default="Jon Snow"/>
+    <aura:attribute name="knows" type="string"/>
+    <lightning:input label="What do you know Jon?" name="myname" value="{!v.knows}"/>
+    <br/>
+    <br/>
+    <div>{!v.nameString} knows "{!v.knows}"</div>
+</aura:component>
