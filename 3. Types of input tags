@@ -1,0 +1,21 @@
+<aura:component >
+	<aura:attribute name="jon" type="string" default="Jon Snow"/>
+    <aura:attribute name="arya" type="string" default="Arya"/>
+    <aura:attribute name="knows" type="string"/>
+    <aura:attribute name="aknows" type="string"/>
+    
+    <!-- checkbox, date, email, number, text-->
+    <lightning:input label="What do you know Jon?" 
+                     type="number"
+                     name="myname" 
+                     value="{!v.knows}"/>
+    
+    <ui:inputText label="and you Arya?" 
+                  labelClass="slds-form-element__label" 
+                  class="slds-input" 
+                  value="{!v.aknows}" />
+    
+    <div>{!v.jon} knows "{!v.knows}"</div>
+    <br/><br/>
+    <div>{!v.arya} knows "{!v.aknows}"</div>
+</aura:component>
