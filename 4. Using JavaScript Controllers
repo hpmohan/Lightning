@@ -1,3 +1,6 @@
+Component
+***************************
+
 <aura:component >
 	<aura:attribute name="greetingString" type="string" />
     <aura:attribute name="greeted" type="boolean" default="false"/>
@@ -21,3 +24,38 @@
     <br/>
     {!v.greetingString}
 </aura:component>
+
+
+
+
+
+Controller.js
+***************************
+
+({
+	myAction : function(component, event, helper) {
+		
+	},
+    greetMe : function(component, event, helper){
+        var greeting ='Joey says how you doinnn';
+        component.set("v.greetingString",greeting);
+        component.set("v.greeted", true);
+        //helper.helperMethod2(component);
+    },
+    greetMeAgain : function(component,event, helper){
+        helper.greetAgain(component);
+    }
+})
+
+
+
+
+
+Helper.js
+***************************
+({
+    greetAgain : function(component){
+        var greeting ='valar morghulis';
+        component.set("v.greetingString",greeting);
+    }
+})
