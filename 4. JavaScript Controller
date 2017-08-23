@@ -1,0 +1,23 @@
+<aura:component >
+	<aura:attribute name="greetingString" type="string" />
+    <aura:attribute name="greeted" type="boolean" default="false"/>
+	<!-- neutral, destructive-->
+    <lightning:button variant="brand" 
+                      label="Greet Me" 
+                      onclick="{!c.greetMe}" 
+                      disabled="{!v.greeted}"/>
+    
+    <lightning:button aura:id="button1"
+                      variant="destructive" 
+                      label="Greet Me Again" 
+                      onclick="{!c.greetMeAgain}" 
+                      />
+    
+    <lightning:button aura:id="button2"
+                      variant="neutral" 
+                      label="Neutral Button"  
+                      />
+    <br/>
+    <br/>
+    {!v.greetingString}
+</aura:component>
