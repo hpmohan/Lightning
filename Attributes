@@ -1,0 +1,39 @@
+<aura:component >
+    <!--String Attribute-->
+    <aura:attribute name="gotString" type="string" default="Winter is coming"/>
+    <p class="heading">String Attribute..</p>
+    {!v.gotString}
+    <br/>
+    <br/>
+    
+    
+    
+    <p class="heading">Number Attribute..</p>
+    <aura:attribute name="numDragons" type="Integer" default="3"/>
+    <p>Daenerys Targaryen has got {!v.numDragons} dragons.</p>
+    <br/>
+    <br/>
+    
+    
+    <aura:attribute name="aryasList" type="List" default="['Joffrey Baratheon',
+                                                          'Cersei Lannister', 
+                                                          'Walder Frey']" />
+    <p class="heading">List Attribute..</p>
+    <div>
+        <h2>Arya's List goes here..</h2>
+    	<aura:iteration items="{!v.aryasList}" var="listItem">
+            <p>{!listItem}</p>
+        </aura:iteration>
+    </div>
+    <br/>
+    <br/>
+	
+   
+    <aura:attribute name="acc" type="Account" default="{'sobjectType':'Account', 'Name':'Account123'}"/>
+    <div class="heading"> and we have one Salesforce Account too..with name {!v.acc.Name}</div>
+    <br/>
+    <br/>
+    
+    
+    <!-- in real world, we will decalre all the attributes in the beginning-->
+</aura:component>
