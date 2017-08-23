@@ -1,0 +1,4 @@
+<aura:component >
+    <aura:attribute name="gotString" type="string" default="Winter is coming"/>
+    {!v.gotString}
+</aura:component>
