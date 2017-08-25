@@ -3,5 +3,6 @@
     <lightning:input label="What do you know Jon?" 
                      name="myname" 
                      value="{!v.outerAttribute}"/>
+    <!--passing values to cmp inside-->
     <c:InnerComponent innerAttribute="{!v.outerAttribute}"/>
 </aura:component>
