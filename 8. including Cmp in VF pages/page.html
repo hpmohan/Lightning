@@ -1,0 +1,16 @@
+<apex:page>
+    <apex:includeLightning />
+	<!--{ label : "Press Me!" },-->
+    <div id="lightning" />
+
+    <script>
+        $Lightning.use("c:AccountSearchApp", function() {
+          $Lightning.createComponent("c:GreetingComponent",
+          {},
+          "lightning",
+          function(cmp) {
+            // do some stuff
+          });
+        });
+    </script>
+</apex:page>
