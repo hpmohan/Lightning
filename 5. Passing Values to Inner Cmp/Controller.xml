@@ -1,0 +1,7 @@
+<aura:component >
+    <aura:attribute name="outerAttribute" type="string"/>
+    <lightning:input label="What do you know Jon?" 
+                     name="myname" 
+                     value="{!v.outerAttribute}"/>
+    <c:InnerComponent innerAttribute="{!v.outerAttribute}"/>
+</aura:component>
