@@ -1,3 +1,4 @@
+//dont mind the extension '.java'
 public class AccountController {
     @AuraEnabled
     public static List<Account> getAccounts(){
