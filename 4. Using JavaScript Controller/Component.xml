@@ -1,7 +1,11 @@
 <aura:component >
-	<aura:attribute name="greetingString" type="string" />
+    <aura:attribute name="greetingString" type="string" />
+    <aura:attribute name="greetingString" type="string" default="look here"/>
     <aura:attribute name="greeted" type="boolean" default="false"/>
-	<!-- neutral, destructive-->
+    <aura:attribute name="Obj" type="object" default="{  'name' : ''}"/>
+    
+    
+    <!-- neutral, destructive-->
     <lightning:button variant="brand" 
                       label="Greet Me" 
                       onclick="{!c.greetMe}" 
@@ -15,9 +19,10 @@
     
     <lightning:button aura:id="button2"
                       variant="neutral" 
-                      label="Neutral Button"  
+                      label="Neutral Button"
+                      onclick="{!c.alertme}"
                       />
     <br/>
     <br/>
-    {!v.greetingString}
+    <p class="slds-text-heading_large">{!v.greetingString}</p>
 </aura:component>
