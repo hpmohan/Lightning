@@ -1,0 +1,4 @@
+<aura:component >
+	<aura:attribute name="innerAttribute" type="string"/>
+    <p>Inner Component says : {!v.innerAttribute}</p>
+</aura:component>
