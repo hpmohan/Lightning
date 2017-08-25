@@ -1,0 +1,20 @@
+<aura:component controller="AccountController">
+    <aura:attribute name="accList" type="Account[]"/><!-- or type="List" or type="object[]" -->
+    <aura:attribute name="accName" type="String" />
+    
+	<!-- DoInit method will run once when the page loads
+		equal to controller.
+	-->
+    <lightning:input label="Enter Name" value="{!v.accName}" name="accName" />
+    <!-- <aura:handler name="init" value="{!this}" action="{!c.fetchAccounts}"/>-->
+    
+    <lightning:button label="Fetch Accounts" onclick="{!c.fetchAccounts}"/>
+    
+    <p>Auto populated Account Details</p>
+    <table>
+        <tr><th>Name</th><th>Phone</th><th>Rating</th></tr>
+        <aura:iteration items="{!v.accList}" var="acc">
+            <tr><td>{!acc.Name}</td><td>{!acc.Phone}</td><td>{!acc.Rating}</td></tr>
+        </aura:iteration>
+    </table>
+</aura:component>
