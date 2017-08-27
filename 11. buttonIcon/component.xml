@@ -1,0 +1,22 @@
+<aura:component >
+    <aura:attribute name="showSettings" type="Boolean" default="false" />
+    <lightning:buttonIcon iconName="utility:settings" variant="bare" 
+                          alternativeText="Settings" iconClass="dark"
+                          onclick="{!c.showSettings}"/>
+    <aura:if isTrue="{!v.showSettings}">
+        <lightning:card>
+            <aura:set attribute="title">
+                Hello!
+            </aura:set>
+            <aura:set attribute="footer">
+                <lightning:badge label="footer"/>
+            </aura:set>
+            <aura:set attribute="actions">
+                <lightning:button label="New"/>
+            </aura:set>
+            <p class="slds-p-horizontal--small">
+                Card Body (custom component)
+            </p>
+        </lightning:card>
+    </aura:if>
+</aura:component>
