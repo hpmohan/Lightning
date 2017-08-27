@@ -10,5 +10,9 @@
     },
     hidePrompt : function(component){
         component.set("v.isJoinClicked",false);
+    },
+    toggle : function(component){
+        var spinnerCmp = component.find('spinner');
+        $A.util.removeClass(spinnerCmp, 'slds-hide');
     }
 })
