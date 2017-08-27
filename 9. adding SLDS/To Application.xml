@@ -1,0 +1,6 @@
+<!--extends="force:slds"-->
+<!-- When slds is added to parent component/app/vf page.. all inner componets will inherit from it -->
+
+<aura:application extends="force:slds">
+    <c:GreetingComponent />
+</aura:application>
