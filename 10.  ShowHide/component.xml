@@ -3,6 +3,7 @@
     
     <lightning:button variant="brand" label="Join Club" onclick="{! c.showModal }" />
     <lightning:button variant="brand" label="Leave the Club" onclick="{! c.exitClub }" />
+    <lightning:button label="Show a spinner" variant="brand" onclick="{!c.toggle}"/>
     <!-- Prompt-->
     <aura:if isTrue="{!v.isJoinClicked}">
         <div class="demo-only" style="height: 24rem;">
@@ -29,4 +30,12 @@
     <ui:message aura:id="exit" class="slds-hide" title="Confirmation" severity="confirm" closable="true">
         Very good... You are a co-founder now..
     </ui:message>
+    <!--Spinner-->
+    
+    <div >
+    	<lightning:spinner aura:id="spinner" class="slds-hide" variant="brand" size="large"/>
+    </div>
+    	
+    
+    
 </aura:component>
