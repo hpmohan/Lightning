@@ -1,0 +1,3 @@
+<aura:component >
+    <div class="slds-text-heading_large">Joey doesn't share fooood..</div> 
+</aura:component>
