@@ -1,0 +1,32 @@
+<aura:component >
+    <aura:attribute name="isJoinClicked" type="boolean" default="false" />
+    
+    <lightning:button variant="brand" label="Join Club" onclick="{! c.showModal }" />
+    <lightning:button variant="brand" label="Leave the Club" onclick="{! c.exitClub }" />
+    <!-- Prompt-->
+    <aura:if isTrue="{!v.isJoinClicked}">
+        <div class="demo-only" style="height: 24rem;">
+            <section role="alertdialog" tabindex="-1" aria-labelledby="prompt-heading-id" aria-describedby="prompt-message-wrapper" class="slds-modal slds-fade-in-open slds-modal_prompt">
+                <div class="slds-modal__container">
+                    <header class="slds-modal__header slds-theme_error slds-theme_alert-texture">
+                        <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" title="Close">
+                            <span class="slds-assistive-text">Close</span>
+                        </button>
+                        <h2 class="slds-text-heading_medium" id="prompt-heading-id">Congrats...!</h2>
+                    </header>
+                    <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                        <p>You are now an official member of 'I-Hate-Rachel' club.</p>
+                    </div>
+                    <footer class="slds-modal__footer slds-theme_default">
+                        <lightning:button variant="brand" label="Okay" onclick="{! c.hidePrompt }" />
+                    </footer>
+                </div>
+            </section>
+            <div class="slds-backdrop slds-backdrop_open"></div>
+        </div>
+    </aura:if>
+    <!-- UI message-->
+    <ui:message aura:id="exit" class="slds-hide" title="Confirmation" severity="confirm" closable="true">
+        Very good... You are a co-founder now..
+    </ui:message>
+</aura:component>
