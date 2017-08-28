@@ -1,0 +1,10 @@
+<aura:component >
+	<!--This component will handle the event-->
+    <aura:attribute name="messageFromEvent" type="String"/>
+    <!--Note the name 'cmpEvent' -->
+    <aura:handler event="c:greetEvent" action="{!c.handleEvent}"/>
+    
+    
+    Event says "{!v.messageFromEvent}"
+
+</aura:component>
