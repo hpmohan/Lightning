@@ -1,0 +1,10 @@
+<aura:component >
+   <!--This component will fire the event-->
+    <aura:registerEvent name="cmpEvent" type="c:greetEvent"/>
+    
+    <h1>Simple Application Event Sample</h1>
+    <p><lightning:button
+        label="Click here to fire an application event"
+        onclick="{!c.fireEvent}" />
+    </p>
+</aura:component>
