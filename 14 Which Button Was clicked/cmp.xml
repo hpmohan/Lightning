@@ -1,0 +1,8 @@
+<aura:component >
+	<aura:attribute name="whichButton" type="String" />
+    
+    <p>You clicked: {!v.whichButton}</p>
+	
+    <lightning:button aura:id="button1" name="buttonname1" label="Click me" onclick="{!c.catchMeIfYouCan}"/>
+    <lightning:button aura:id="button2" name="buttonname2" label="Click me too" onclick="{!c.catchMeIfYouCan}"/>
+</aura:component>
