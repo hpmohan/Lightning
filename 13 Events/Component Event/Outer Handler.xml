@@ -1,0 +1,12 @@
+<aura:component >
+	<aura:attribute name="messageFromEvent" type="String"/>
+    
+    <!-- Handler: Note that name="cmpEvent" in aura:registerEvent in GreetingComponent -->
+    <aura:handler name="cmpEvent" event="c:greetEvent" action="{!c.handleComponentEvent}"/>
+    
+    <!--Inner Component that fires the event-->
+    <c:GreetingComponent />
+    
+    <!--Finally the message-->
+    <p>{!v.messageFromEvent}</p>
+</aura:component>
