@@ -1,0 +1,18 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,force:hasSObjectName" access="global">
+	<!--flexipage:availableForAllPageTypes
+		: component to be used in Lightning App Builder.
+    force:appHostable
+		: component to be used as a navigation element in Lightning Experience or the Salesforce1 app.
+	flexipage:availableForRecordHome & force:hasRecordId
+		: component available for use on a Record home page in Lightning Experience.
+		: 'force:hasRecordId' automatically retrieves the current record’s ID when the page loads.
+		: <aura:attribute name="recordId" type="Id" /> , automatically inserted but still declare the attribute.
+    force:hasSObjectName
+		: <aura:attribute name="sObjectName" type="String" />
+		: automatically retrieves the current record’s API name
+		: var objectType = component.get("v.sObjectName");
+	-->
+    <p>Hello there</p>
+    {!v.recordId}
+    {!v.sObjectName}
+</aura:component>
