@@ -1,0 +1,8 @@
+<aura:component >
+    <aura:attribute type="Boolean" name="disabledButton" default="true"/>
+    
+    <!--HERE-->
+    <ui:outputURL value="/apex/ForceDownloadAsPDF" target="_self" label="download pdf" click="{!c.downloadPDF}"/>
+    
+    <lightning:button label="success" disabled="{!v.disabledButton}" />
+</aura:component>
