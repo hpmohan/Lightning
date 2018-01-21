@@ -2,7 +2,7 @@
     <aura:attribute name="accList" type="Account[]"/><!-- or type="List" or type="object[]" -->
     
     <!-- DoInit method will run once when the page loads
-      equal to controller.
+      equivalent to constructor.
     -->
     
     <aura:handler name="init" value="{!this}" action="{!c.fetchAccounts}"/>
